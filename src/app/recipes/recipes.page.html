@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>recipes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list class="ion-margin-bottom" *ngFor="let recipe of recipes" [routerLink]="['./', recipe.id]">
+    <ion-avatar slot="start">
+      <ion-img [src]="recipe.imageUrl"></ion-img>
+    </ion-avatar>
+    <ion-label class="ion-text-wrap">{{recipe.title}}</ion-label>
+  </ion-list>
+</ion-content>
